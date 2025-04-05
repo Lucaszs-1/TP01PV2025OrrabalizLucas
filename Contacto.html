@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Museos Españoles</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <header>
@@ -19,7 +19,7 @@
     <main>
         <article>
             <section>
-                <form>
+                <form id="formulario">
                     <div>
                         <label for="Nombre">Nombre y apellido: </label>
                         <input id="Nombre" placeholder="Nombre y apellido">
@@ -41,4 +41,22 @@
     </main>
 
     <footer>
-        <h1></h1>
+        <p class="fot">Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        var formulario=document.getElementById("formulario");
+        function controlFormulario(){
+            event.preventDefault();
+            var nombre= document.getElementById("Nombre");
+            var correo= document.getElementById("mail");
+            var comentario= document.getElementById("coment");
+            alert("Nombre: " + nombre.value + "Mail: " + correo.value + "Comentario: " + comentario.value);
+            nombre.value="";
+            correo.value="";
+            comentario.value="";
+        }
+        formulario.addEventListener("submit", controlFormulario);
+    </script>
+ </body>
+</html>

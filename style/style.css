@@ -113,3 +113,11 @@ form button {
 form div:last-child {
     text-align: center;
 }
+
+.fot{
+    background-color: #4c4c4c;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
